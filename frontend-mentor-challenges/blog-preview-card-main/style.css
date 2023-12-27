@@ -1,7 +1,41 @@
 /* CSS file for frontend-mentor challenge "blog-preview-card-main". */
 /* Daniel Godin */
 
+/* 
+Layout
+The designs were created to the following widths:
+
+Mobile: 375px
+Desktop: 1440px
+Colors
+Primary
+Yellow: hsl(47, 88%, 63%)
+Neutral
+White: hsl(0, 0%, 100%)
+Grey: hsl(0, 0%, 50%)
+Black: hsl(0, 0%, 7%)
+Typography
+Body Copy
+Font size (paragraph): 16px
+Font
+Family: Figtree
+Weights: 600, 800
+*/
+
 :root {
+    /* CSS Variables */
+    /* Colors */
+    --color-primary-yellow: hsl(47, 88%, 63%);
+    --color-neutral-white: hsl(0, 0%, 100%);
+    --color-neutral-grey: hsl(0, 0%, 50%);
+    --color-neutral-black: hsl(0, 0%, 7%);
+
+    /* Typography: */
+    /* Body Copy: */
+    --text-body-copy-font-size: 16px;
+    --text-font-family: Figtree;
+    --text-font-weight-600: 600;
+    --text-font-weight-800: 800;
 
 }
 
@@ -12,6 +46,40 @@
 }
 
 html {
+    font-family: var(--text-font-family);
+    font-size: var(--text-body-copy-font-size);
+}
 
+body {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: var(--color-primary-yellow);
+}
+
+#pageContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+#mainCard {
+    height: auto;
+    width: 325px;
+
+    padding: 25px;
+
+    background-color: var(--color-neutral-white);
+
+    border: 2px solid var(--color-neutral-black);
+    border-radius: 15px;
+
+    display: grid;
+    gap: 25px;
+}
+
+#topImg {
+    width: 100%;
+    border-radius: 10px;
 }
 
